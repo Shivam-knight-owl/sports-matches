@@ -161,37 +161,14 @@ The app includes comprehensive error handling:
 - **Data Errors**: Missing or malformed response data
 - **User Feedback**: Clear error messages and retry options
 
-## 🔮 Future Enhancements
-
-- [ ] Live score updates with WebSocket
-- [ ] Match predictions and statistics
-- [ ] Favorite teams and personalization
-- [ ] Push notifications for match events
-- [ ] Historical match data and trends
-- [ ] Multiple league support with tabs
-- [ ] Advanced filtering (by team, competition)
-- [ ] Match details modal with lineup information
-
-## 🤝 Contributing
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
+# Acknowledgments
 
 - **Data Provider**: [API-FOOTBALL](https://www.api-football.com/) for comprehensive football data
 - **Icons**: [Lucide React](https://lucide.dev/) for beautiful SVG icons
 - **Styling**: [TailwindCSS](https://tailwindcss.com/) for utility-first CSS
 - **Build Tool**: [Vite](https://vitejs.dev/) for lightning-fast development
 
-## 📞 Support
+## Support
 
 If you have any questions or run into issues:
 
@@ -203,47 +180,4 @@ If you have any questions or run into issues:
 ---
 
 **Made with ⚽ and ❤️ for football fans worldwide**
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
