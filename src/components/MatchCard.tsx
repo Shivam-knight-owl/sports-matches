@@ -9,7 +9,7 @@ interface MatchCardProps {
 
 const MatchCard: React.FC<MatchCardProps> = ({ match }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-400">
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-3 text-white">
         <div className="flex items-center gap-2">
           <Trophy size={16} />  <h3 className="font-medium text-sm truncate">{match.league.name}</h3>
@@ -32,10 +32,9 @@ const MatchCard: React.FC<MatchCardProps> = ({ match }) => {
                     (e.target as HTMLImageElement).style.display = 'none';
                   }}
                 />
-              )}
-              <span className="font-semibold truncate">{match.teams.home.name}</span>
+              )}              <span className="font-semibold text-gray-900 dark:text-gray-100 truncate">{match.teams.home.name}</span>
             </div>
-            <div className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium">
+            <div className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
               HOME
             </div>
           </div>
@@ -50,17 +49,15 @@ const MatchCard: React.FC<MatchCardProps> = ({ match }) => {
                     (e.target as HTMLImageElement).style.display = 'none';
                   }}
                 />
-              )}
-              <span className="font-semibold truncate">{match.teams.away.name}</span>
+              )}              <span className="font-semibold text-gray-900 dark:text-gray-100 truncate">{match.teams.away.name}</span>
             </div>
-            <div className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium">
+            <div className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
               AWAY
             </div>
           </div>
         </div>
-        
-        <div className="mt-4 flex justify-between items-center">
-          <div className="bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-3 py-1.5 rounded-lg text-sm font-medium flex items-center gap-1.5">
+          <div className="mt-4 flex justify-between items-center">
+          <div className="bg-green-50 text-green-700 px-3 py-1.5 rounded-lg text-sm font-medium flex items-center gap-1.5">
             <Clock size={14} />
             {formatMatchTime(match.fixture.date)}
           </div>          <div className="text-xs text-gray-500 dark:text-gray-400">

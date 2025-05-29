@@ -9,8 +9,7 @@ interface MatchListProps {
   error: string | null;
 }
 
-const MatchList: React.FC<MatchListProps> = ({ matches, isLoading, error }) => {
-  if (error) {
+const MatchList: React.FC<MatchListProps> = ({ matches, isLoading, error }) => {  if (error) {
     return (
       <div className="text-center py-12 px-4">
         <div className="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 p-4 rounded-lg inline-block mx-auto">

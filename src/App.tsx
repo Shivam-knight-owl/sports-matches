@@ -16,8 +16,8 @@ function App() {
         <div className="mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white flex items-center gap-2">
-                <CalendarClock className="text-blue-600 dark:text-blue-400" size={24} />
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 flex items-center gap-2">
+                <CalendarClock className="text-blue-600" size={24} />
                 Upcoming Matches
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mt-1">

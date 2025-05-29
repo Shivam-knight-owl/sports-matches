@@ -21,8 +21,9 @@ export const getUpcomingMatches = async (leagueId?: number): Promise<MatchesResp
       params.season = new Date().getFullYear();
     }
     const response = await api.get('/fixtures', { params });
+    console.log('API Response:', response.data);
     return response.data;
-    
+
   } catch (error) {
     if (axios.isAxiosError(error)) {
       const apiError: ApiError = {
